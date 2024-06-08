@@ -9,6 +9,9 @@ a{
     text-decoration: none;
     color: #000;
 }
+.logo{
+    height: calc(2.8vw + 28.7px);
+}
 section{
     padding: 0 calc(2.9vw + 8.8px);
     margin-bottom: 45px;
@@ -57,15 +60,15 @@ nav{
     width: 25px;
     height: 3px;
     background-color:#222
-    
+
 }
 .mobile_menu_wrapper{
     position: fixed;
     left: 0;
     top: 0;
     width: 100vw;
-    height: 110vh; 
-    background-color: rgba(0, 0, 0, 0.5); 
+    height: 110vh;
+    background-color: rgba(0, 0, 0, 0.5);
     display: none;
     justify-content: center;
     align-items: center;
@@ -109,7 +112,7 @@ nav{
     position: absolute;
     top: 20px;
     right: 30px;
-    
+
 }
 .close{
     width: 100%;
@@ -130,7 +133,7 @@ nav{
 .section1 h3{
     font-size: calc(1.1vw + 15.5px);
     color: white;
-    
+
 }
 .section1 div{
     display: flex;
@@ -155,7 +158,9 @@ nav{
 
 /* Section1 End */
 
-/* Section2 start */
+/* ========== Section2 start ========== */
+
+
 .section2{
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -163,7 +168,6 @@ nav{
     gap: 0 8px;
 }
 .product_catalog_card{
-    
     padding: 20px;
     margin-bottom: 20px;
     min-height: 180px;
@@ -178,12 +182,12 @@ nav{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
+
 }
 .product_catalog_card li{
     border-radius: 5px;
-    background: #FFF; 
-    padding: 16px;  
+    background: #FFF;
+    padding: 16px;
 }
 .catalogNews{
     padding: 12px 20px;
@@ -191,6 +195,9 @@ nav{
     align-items: center;
     gap: 15px;
     margin-bottom: 10px;
+}
+.product_sliders{
+    width:calc(95vw - 251px);
 }
 
 .product_sliders h1{
@@ -205,14 +212,27 @@ nav{
     font-size: calc(0.6vw + 15.8px);
     font-weight: 400;
 }
+.similar-items li {
+    font-size: 14px;  /* Установите нужный размер шрифта */
+    line-height: 1.2; /* Для улучшения читабельности */
+}
+.splide__track{
+   width: 60% !important;
+}
+.splide__arrow--prev {
+    left: 10em !important;
+    font-size: 20px;
+}
+.splide__arrow--next {
+    right: 10em !important;
+    font-size: 20px;
+}
 .slider1_card{
-    height: 355px;
-    
-    
+    height: 450px !important;
 }
 .slider1_card img{
     width: 100%;
-    height: 50%;
+    height: 65%;
     border-radius: 10px 10px 0 0;
 }
 .slider1_catd_text{
@@ -221,18 +241,21 @@ nav{
 .slider1_catd_text h5 {
     margin: 15px 0;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
 }
 .splide__track{
-    width: 90%;
+    width: 50%;
     margin: 0 auto;
-    
 }
 .slider1_catd_text li{
     list-style:disc;
     margin-left: 15px;
 }
-/* Section2 End */
+
+
+/* ========== Section2 End ========== */
+
+
 .news_container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -290,7 +313,7 @@ footer{
 .footer_subtitle{
     color: #8c8c8c;
     font-size: 14px;
-} 
+}
 .footer_right{
     display: flex;
     flex-direction: column;
@@ -341,9 +364,7 @@ footer{
     .section1 div{
         width: calc(23vw + 59.3px);
     }
-    .section2{
-        grid-template-columns: 1fr 3fr;
-    }
+
     .section2{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
@@ -359,13 +380,17 @@ footer{
         width: 100%;
         justify-content: space-between;
     }
+    .product_sliders{
+        width:calc(95.7vw - 29.7px)
+    }
+    
 }
 @media (max-width:870px){
     .news_container,.photo_container{
         grid-template-columns: 1fr 1fr;
         padding: 0;
     }
-    
+
 }
 @media (max-width:790px){
     .product_catalog{
@@ -381,7 +406,7 @@ footer{
     .photo_card img{
         height: 60%;
     }
-   
+
 }
 
 @media (max-width:570px){

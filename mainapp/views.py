@@ -4,20 +4,17 @@ from .models import MainProduct, ProductImage
 
 # Create your views here.
 def index(request):
-    product = MainProduct.objects.all()
-    # for i in product:
-    #     print(i.title)
-    if product:
-        return render(request, 'mainapp/index.html', {"product": product})
-    else:
-        return render(request, 'mainapp/index.html')
+    product1 = MainProduct.objects.filter(category="Ex-Proof ME").all()
+    product2 = MainProduct.objects.filter(category="QM 1000V").all()
+    context = {
+        "category1": product1,
+        "category2": product2
+    }
+    return render(request, 'mainapp/index.html', context)
 
 
 def test(request):
     product = MainProduct.objects.all()
-    print(product)
-    # for i in product:
-    #     print(i.title)
     if product:
         return render(request, 'mainapp/test.html', {"product": product})
     else:

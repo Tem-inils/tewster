@@ -11,14 +11,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="shortcut icon" href="{% static 'img/Albert.svg' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/pagination.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
     <link rel="stylesheet" href="{% static 'splide-4.1.3/dist/css/splide.min.css' %}"/>
-    <title>Document</title>
+    <title>Mine Technology</title>
   </head>
   <body>
     <header>
-      <img src="{% static 'img/logo.png' %}" class="logo" alt="" />
+      <img src="{% static 'img/Albert.svg' %}" class="logo" alt="" />
       <nav class="nav">
         <ul class="headerMenu">
           <li><a href="/">Главная </a></li>
@@ -53,9 +54,11 @@
           <li>Контакты</li>
         </ul>
       </div>
+
     </header>
 
     <section class="section1">
+
       <h3>Производственное предприятие</h3>
       <h3>шахтной электроаппаратуры</h3>
       <div>
@@ -95,82 +98,122 @@
           Интересные новости
         </div>
       </div>
+
       <div class="product_sliders">
         <h1>
           Рудничное электрооборудование для шахт карьеров и рудников - PH1, PB
         </h1>
+
         <h3>Взрывозащищенноё рудничное электрооборудование - PB</h3>
         <div class="splide" role="group" aria-label="Splide Basic HTML Example">
           <div class="splide__track">
             <ul class="splide__list">
 
-              {% for i in product %}
+            {% for i in category1 %}
               <li class="splide__slide slider1_card greey">
                 <img src="{{ i.images.first.img.url }}" alt="" />
-                <div class="slider1_catd_text">
-                  <h5>{{ i.title }}</h5>
+                  <div class="slider1_catd_text">
+                    <h5>{{ i.title }}</h5>
                     {% if i.similar %}
-                 <ul class="similar-items">
-                            {% for i in i.similar.all %}
-                            <li>{{ i.reduction }}</li>
-                            {% endfor %}
-                </ul>
+                       <ul class="similar-items">
+                          {% for i in i.similar.all %}
+                         <a class="button_link" href=""><li>{{ i.reduction }}</li></a>
+                          {% endfor %}
+                      </ul>
                     {% else %}
                     {% endif %}
-                </div>
+                  </div>
               </li>
-              {% endfor %}
-<!--              <li class="splide__slide slider1_card greey">-->
-<!--                <img src="{% static 'img/Rectangle 1.png' %}" alt="" />-->
-<!--                <div class="slider1_catd_text">-->
-<!--                  <h5>Пускатели рудничные</h5>-->
-<!--                  <ul>-->
-<!--                    <li>с фиксированной уставкой тока</li>-->
-<!--                    <li>с регулируемой уставкой тока</li>-->
-<!--                    <li>для управления задвижками</li>-->
-<!--                    <li>с плавным пуском и реверсом</li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--              </li>-->
+            {% endfor %}
 
-<!--              <li class="splide__slide slider1_card greey">-->
-<!--                <img src="{% static 'img/Rectangle 1.png' %}" alt="" />-->
-<!--                <div class="slider1_catd_text">-->
-<!--                  <h5>-->
-<!--                    Пускозащитная аппаратура малой мощности на токи от 0,1А до-->
-<!--                    63А-->
-<!--                  </h5>-->
-<!--                  <ul>-->
-<!--                    <li>с фиксированной уставкой тока</li>-->
-<!--                    <li>с регулируемой уставкой тока</li>-->
-<!--                    <li>для управления задвижками</li>-->
-<!--                    <li>с плавным пуском и реверсом</li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--              </li>-->
-<!--              <li class="splide__slide slider1_card greey">-->
-<!--                <img src="{% static 'img/Rectangle 1.png' %}" alt="" />-->
-<!--                <div class="slider1_catd_text">-->
-<!--                  <h5>-->
-<!--                    Пускозащитная аппаратура малой мощности на токи от 0,1А до-->
-<!--                    63А-->
-<!--                  </h5>-->
-<!--                  <ul>-->
-<!--                    <li>с фиксированной уставкой тока</li>-->
-<!--                    <li>с регулируемой уставкой тока</li>-->
-<!--                    <li>для управления задвижками</li>-->
-<!--                    <li>с плавным пуском и реверсом</li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--              </li>-->
+            </ul>
+          </div>
+        </div>
+
+        <h3>Взрывозащищенноё рудничное электрооборудование - PB</h3>
+        <div class="splide slider1" role="group" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+
+            {% for i in category2 %}
+              <li class="splide__slide slider1_card greey">
+                <img src="{{ i.images.first.img.url }}" alt="" />
+                  <div class="slider1_catd_text">
+                    <h5>{{ i.title }}</h5>
+                    {% if i.similar %}
+                       <ul class="similar-items">
+                          {% for i in i.similar.all %}
+                         <a class="button_link" href=""><li>{{ i.reduction }}</li></a>
+                          {% endfor %}
+                      </ul>
+                    {% else %}
+                    {% endif %}
+                  </div>
+              </li>
+            {% endfor %}
+
+            </ul>
+          </div>
+        </div>
+
+        <h3>Взрывозащищенноё рудничное электрооборудование - PB</h3>
+        <div class="splide slider2" role="group" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+
+            {% for i in category1 %}
+              <li class="splide__slide slider1_card greey">
+                <img src="{{ i.images.first.img.url }}" alt="" />
+                  <div class="slider1_catd_text">
+                    <h5>{{ i.title }}</h5>
+                    {% if i.similar %}
+                       <ul class="similar-items">
+                          {% for i in i.similar.all %}
+                         <a class="button_link" href=""><li>{{ i.reduction }}</li></a>
+                          {% endfor %}
+                      </ul>
+                    {% else %}
+                    {% endif %}
+                  </div>
+              </li>
+            {% endfor %}
+
+            </ul>
+          </div>
+        </div>
+
+        <h3>Взрывозащищенноё рудничное электрооборудование - PB</h3>
+        <div class="splide slider3" role="group" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+
+            {% for i in category1 %}
+              <li class="splide__slide slider1_card greey">
+                <img src="{{ i.images.first.img.url }}" alt="" />
+                  <div class="slider1_catd_text">
+                    <h5>{{ i.title }}</h5>
+                    {% if i.similar %}
+                       <ul class="similar-items">
+                          {% for i in i.similar.all %}
+                         <a class="button_link" href=""><li>{{ i.reduction }}</li></a>
+                          {% endfor %}
+                      </ul>
+                    {% else %}
+                    {% endif %}
+                  </div>
+              </li>
+            {% endfor %}
+
             </ul>
           </div>
         </div>
       </div>
+
     </section>
+
     <footer>
       <div class="footer_left">
-        <img src="{% static 'img/logo_footer.png' %}" alt="" />
+        <img src="{% static 'img/Albert.svg' %}" class="logo" alt="" />
         <div>
           <div class="footer_title">«ШЭЛА» 2007-2024 © Все права защищены.</div>
           <div class="footer_subtitle">
@@ -210,6 +253,54 @@
           },
         });
         splide.mount();
+      });
+       document.addEventListener("DOMContentLoaded", function () {
+        var splide = new Splide(".splide.slider1", {
+          perPage: 3,
+          gap: "20px",
+          breakpoints: {
+            975: {
+              perPage: 2,
+            },
+            790: {
+              perPage: 1,
+              arrows: false,
+              padginations: false,
+            },
+          },
+        });
+        splide.mount();
+        var splide = new Splide(".splide.slider2", {
+          perPage: 3,
+          gap: "20px",
+          breakpoints: {
+            975: {
+              perPage: 2,
+            },
+            790: {
+              perPage: 1,
+              arrows: false,
+              padginations: false,
+            },
+          },
+        });
+        splide.mount();
+         var splide = new Splide(".splide.slider3", {
+          perPage: 3,
+          gap: "20px",
+          breakpoints: {
+            975: {
+              perPage: 2,
+            },
+            790: {
+              perPage: 1,
+              arrows: false,
+              padginations: false,
+            },
+          },
+        });
+        splide.mount();
+
       });
     </script>
     <script src="{% static 'splide-4.1.3/dist/js/splide.min.js' %}"></script>
